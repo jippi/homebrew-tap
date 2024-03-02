@@ -5,13 +5,13 @@
 class Dottie < Formula
   desc "Makes working with .env files easy"
   homepage "https://github.com/jippi/dottie"
-  version "0.10.1"
+  version "0.11.0"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/jippi/dottie/releases/download/v0.10.1/dottie_Darwin_arm64.tar.gz"
-      sha256 "079aab9422fe44d866b142abe863342eb5cddcccce7fdeb40b362074ede28b60"
+    if Hardware::CPU.intel?
+      url "https://github.com/jippi/dottie/releases/download/v0.11.0/dottie_Darwin_x86_64.tar.gz"
+      sha256 "68f98d5b042183286c2de078c05d97b259004005a59099bfbb93ea6a24f8cc82"
 
       def install
         bin.install "dottie"
@@ -21,9 +21,9 @@ class Dottie < Formula
         man1.install "manpages/dottie.1.gz"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/jippi/dottie/releases/download/v0.10.1/dottie_Darwin_x86_64.tar.gz"
-      sha256 "55cb0ca6c76389d851df9f5646ad1a7ca494b8f4515835e31b66b4acae7fba45"
+    if Hardware::CPU.arm?
+      url "https://github.com/jippi/dottie/releases/download/v0.11.0/dottie_Darwin_arm64.tar.gz"
+      sha256 "4b18be15bae93e6a1410fa2fce22783dbe0ef964da4c52fb5847a9be22d4e65a"
 
       def install
         bin.install "dottie"
@@ -36,21 +36,9 @@ class Dottie < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jippi/dottie/releases/download/v0.10.1/dottie_Linux_arm64.tar.gz"
-      sha256 "821117b5064a706649b7dbced413411f0b0a83f412f50730f6d3c9cebd2f660d"
-
-      def install
-        bin.install "dottie"
-        bash_completion.install "completions/dottie.bash" => "dottie"
-        zsh_completion.install "completions/dottie.zsh" => "_dottie"
-        fish_completion.install "completions/dottie.fish"
-        man1.install "manpages/dottie.1.gz"
-      end
-    end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/jippi/dottie/releases/download/v0.10.1/dottie_Linux_armv7.tar.gz"
-      sha256 "618a082b1d8d06c2616770075323affd6d4181905b773f4bff5e3d66dee61f4e"
+      url "https://github.com/jippi/dottie/releases/download/v0.11.0/dottie_Linux_armv7.tar.gz"
+      sha256 "c476b3035c9dee913868094a6f11c520a004fc466d6a97b000b7494957320e98"
 
       def install
         bin.install "dottie"
@@ -61,8 +49,20 @@ class Dottie < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/jippi/dottie/releases/download/v0.10.1/dottie_Linux_x86_64.tar.gz"
-      sha256 "ef0e4a6a44e311a97b5d67f4777295f5feac11c2c099e020c4e2999bc52c38f1"
+      url "https://github.com/jippi/dottie/releases/download/v0.11.0/dottie_Linux_x86_64.tar.gz"
+      sha256 "e1505b03e8d591f11781b7edab107172901f464da102b779fa6fc0c17a76bd18"
+
+      def install
+        bin.install "dottie"
+        bash_completion.install "completions/dottie.bash" => "dottie"
+        zsh_completion.install "completions/dottie.zsh" => "_dottie"
+        fish_completion.install "completions/dottie.fish"
+        man1.install "manpages/dottie.1.gz"
+      end
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/jippi/dottie/releases/download/v0.11.0/dottie_Linux_arm64.tar.gz"
+      sha256 "b9625ff91a38a4749fe19a13a0e8147bbc844ea300163073ae32db8077b496e7"
 
       def install
         bin.install "dottie"
