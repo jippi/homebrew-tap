@@ -5,21 +5,21 @@
 class ScmEngine < Formula
   desc "Makes working with .env files easy"
   homepage "https://github.com/jippi/scm-engine"
-  version "0.11.0"
+  version "0.12.0"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/jippi/scm-engine/releases/download/v0.11.0/scm-engine_Darwin_x86_64.tar.gz"
-      sha256 "e2d366dc767e55b52c4874a98bac26ca466dcf8e0044c0fc00f3299108ba20d4"
+      url "https://github.com/jippi/scm-engine/releases/download/v0.12.0/scm-engine_Darwin_x86_64.tar.gz"
+      sha256 "306cccb49692cffacb1fa92cf8f2f9f18b6b7c1e406e42a1aea946d5d20aff07"
 
       def install
         bin.install "scm-engine"
       end
     end
     on_arm do
-      url "https://github.com/jippi/scm-engine/releases/download/v0.11.0/scm-engine_Darwin_arm64.tar.gz"
-      sha256 "15f706063bacad0ceac81eb5b73027aef47412c208312f4eb54469dfc27a78d9"
+      url "https://github.com/jippi/scm-engine/releases/download/v0.12.0/scm-engine_Darwin_arm64.tar.gz"
+      sha256 "1a2b905b7064df1dc8476967a4dbad2b8e4bb335ccea523dde0db5eb8dabe93c"
 
       def install
         bin.install "scm-engine"
@@ -30,8 +30,8 @@ class ScmEngine < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/jippi/scm-engine/releases/download/v0.11.0/scm-engine_Linux_x86_64.tar.gz"
-        sha256 "61975b49c5a707d9415f3df3539529b9de3f5beec11f065ec6bba208737ef5e6"
+        url "https://github.com/jippi/scm-engine/releases/download/v0.12.0/scm-engine_Linux_x86_64.tar.gz"
+        sha256 "37acad4543cd19d2d3f9f24991e7fcb41bec2e9bd8595812f0163e0769535864"
 
         def install
           bin.install "scm-engine"
@@ -40,8 +40,8 @@ class ScmEngine < Formula
     end
     on_arm do
       if !Hardware::CPU.is_64_bit?
-        url "https://github.com/jippi/scm-engine/releases/download/v0.11.0/scm-engine_Linux_armv7.tar.gz"
-        sha256 "11f44fefa82d9963c68b3e2e57489adfb9d52ee6cf9da0244615315c9a17dce2"
+        url "https://github.com/jippi/scm-engine/releases/download/v0.12.0/scm-engine_Linux_armv7.tar.gz"
+        sha256 "aa19582661778eb7f2ed940d1a3feb358e750163dd3c26c102da2a22ea2fc91e"
 
         def install
           bin.install "scm-engine"
@@ -50,8 +50,8 @@ class ScmEngine < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/jippi/scm-engine/releases/download/v0.11.0/scm-engine_Linux_arm64.tar.gz"
-        sha256 "7391a487ca094f223ff5f376f604efde7fa6ed17c190f37189ac3e601e119680"
+        url "https://github.com/jippi/scm-engine/releases/download/v0.12.0/scm-engine_Linux_arm64.tar.gz"
+        sha256 "ade5d4ae40c43d4264bcf0718fc7f8f5e1373419d228bc8b8870e767dbf8e3e8"
 
         def install
           bin.install "scm-engine"
