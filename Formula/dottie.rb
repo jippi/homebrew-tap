@@ -11,7 +11,7 @@ class Dottie < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/jippi/dottie/releases/download/v0.15.0/dottie_Darwin_x86_64.tar.gz"
-      sha256 "2aa26467d596eae7a5ff5879045579ecda4e15af7c325ff4286aa9f22f7c9415"
+      sha256 "4d8106dad4870d59f125b107ceb689250587adb83b3d86aaf257c4eef0c4035e"
 
       def install
         bin.install "dottie"
@@ -23,7 +23,7 @@ class Dottie < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/jippi/dottie/releases/download/v0.15.0/dottie_Darwin_arm64.tar.gz"
-      sha256 "668f55cdb9383efce1ef2a71bf07998c7199cbdc66045d414759108d5f6b4afe"
+      sha256 "52084c5fb3188deb6b79e8edd9c9420532c5c523b40f1a4314e6a4d765380e13"
 
       def install
         bin.install "dottie"
@@ -39,7 +39,7 @@ class Dottie < Formula
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
         url "https://github.com/jippi/dottie/releases/download/v0.15.0/dottie_Linux_x86_64.tar.gz"
-        sha256 "86efdd2c5cbc6bca3fc92ac67546e2331f7d98cca0bc5cb3590ad752a7ebfd6c"
+        sha256 "61b57ff54c770a1bb0c474e34691697a199c2fdcf9798667b6659f735dee204e"
 
         def install
           bin.install "dottie"
@@ -53,7 +53,7 @@ class Dottie < Formula
     if Hardware::CPU.arm?
       if !Hardware::CPU.is_64_bit?
         url "https://github.com/jippi/dottie/releases/download/v0.15.0/dottie_Linux_armv7.tar.gz"
-        sha256 "c0968e7d47881ebde5a019143d2765267ceb5e1ebb2ac882e09b69aeea52705f"
+        sha256 "36e6176c535ed01a907244117a0cc9bca34dba54ed73e975f0768c9767fce86e"
 
         def install
           bin.install "dottie"
@@ -67,7 +67,7 @@ class Dottie < Formula
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
         url "https://github.com/jippi/dottie/releases/download/v0.15.0/dottie_Linux_arm64.tar.gz"
-        sha256 "2a146248f8b859fd871118c67160205463e6422b186073aa95dc38561d34d80f"
+        sha256 "597f817f42fca790fa7a6313d8e51f9fcdfe62c2377f3d5edaf2607586117b4d"
 
         def install
           bin.install "dottie"
